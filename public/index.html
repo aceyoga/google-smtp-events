@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Notifier</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Event Notifier</h1>
+    <div style="text-align:center;margin-bottom:1rem;">
+      <span>by <strong>aceyoga</strong></span>
+    </div>
+    <button id="toggle-form" style="margin-bottom:1rem;">Add Event</button>
+    <div id="form-container" style="display:none;">
+      <form id="event-form">
+        <input type="text" id="title" placeholder="Event Title" required />
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="text" id="location" placeholder="Location" />
+        <label for="startTime">Start Time</label>
+        <input type="datetime-local" id="startTime" required placeholder="Start Time" title="Start Time" />
+        <label for="endTime">End Time</label>
+        <input type="datetime-local" id="endTime" required placeholder="End Time" title="End Time" />
+        <input type="text" id="attendees" placeholder="Attendees (comma separated emails)" />
+        <button type="submit">Add Event</button>
+      </form>
+    </div>
+    <ul id="events-list"></ul>
+  </div>
+  <script src="/main.js"></script>
+</body>
+</html>
